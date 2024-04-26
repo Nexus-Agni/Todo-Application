@@ -23,6 +23,7 @@ function TodoForm() {
       }
     )
     setTodo("")
+    // window.location.reload()
   }
   return (
     <div className="max-w-7xl mx-auto mt-10">
