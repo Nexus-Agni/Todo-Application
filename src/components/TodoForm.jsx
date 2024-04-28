@@ -9,8 +9,8 @@ function TodoForm() {
     e.preventDefault();
     
     const promise = database.createDocument(
-      '662a06dd62d4dab2e0c8',
-      '662a06e4bc4ec04c790a',
+      process.env.DATABASE_ID,
+      process.env.TODO_DOCUMENT_ID,
       uuid4(),
       {todo}
   );

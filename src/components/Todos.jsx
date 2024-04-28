@@ -10,8 +10,8 @@ function Todos() {
       setLoader(true)
       try {
         const response = await database.listDocuments(
-          '662a06dd62d4dab2e0c8',
-          '662a06e4bc4ec04c790a',
+          process.env.DATABASE_ID,
+          process.env.TODO_DOCUMENT_ID,
         )
         setTodos(response.documents)
       } catch (error) {

@@ -12,29 +12,30 @@ function Signup() {
     });
 
     // Signup function
+   // Signup function
     const signupUser = async (e) => {
-        e.preventDefault()
-        console.log(user);
-        const promise = await account.create(
-            uuid4(),
-            user.email,
-            user.password,
-            user.name
-        )
+      e.preventDefault()
+      console.log(user);
+      const promise = account.create(
+          uuid4(),
+          user.email,
+          user.password,
+          user.name
+      )
 
-        console.log(promise);
+      console.log(promise);
 
-        promise.then(
-            //success
-            function (response) {
-                console.log(response)
-                navigate('/profile')
-            },
-            //failure
-            function (error) {
-                console.log(error)
-            }
-        )
+      promise.then(
+          //success
+          function (response) {
+              console.log(response)
+              navigate('/profile')
+          },
+          //failure
+          function (error) {
+              console.log(error)
+          }
+      )
     }
 
   return (
